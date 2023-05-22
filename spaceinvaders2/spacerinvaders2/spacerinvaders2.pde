@@ -1,5 +1,6 @@
 int playerX, playerY;
 int pw;
+int alien1Y;
 
 void setup() {
  size(720, 960);
@@ -11,6 +12,8 @@ void draw() {
   background(0, 0, 0);
  spawnPlayer();
  updatePlayer();
+ spawnAlien1();
+ updateAlien1();
 }
 
 void spawnPlayer() {
@@ -18,6 +21,18 @@ void spawnPlayer() {
  player.resize(0, 50);
  image(player, playerX, height-player.height);
  pw = player.width;
+}
+
+void spawnAlien1() {
+ PImage alien1 = loadImage("alien1.png");
+ alien1.resize(0, 50);
+ for (int i = 0; i <= width/(alien1.width + 40); i++)
+ image(alien1, (alien1.width+40)*i, alien1Y);
+ 
+}
+
+void updateAlien1() {
+  if (frameCount%40 == 0) alien1Y+=10;
 }
 
 void updatePlayer() {
