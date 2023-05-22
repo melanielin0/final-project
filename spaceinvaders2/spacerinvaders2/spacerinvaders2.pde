@@ -1,6 +1,6 @@
-int playerX, playerY;
-int pw;
-int alien1Y;
+public int playerX, playerY;
+public int pw;
+public int alien1Y;
 
 void setup() {
  size(720, 960);
