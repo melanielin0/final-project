@@ -3,7 +3,7 @@ public int pw;
 public int alien1Y;
 
 void setup() {
- size(720, 960);
+ size(720, 720);
 
 
 }
@@ -32,7 +32,7 @@ void spawnAlien1() {
 }
 
 void updateAlien1() {
-  if (frameCount%40 == 0) alien1Y+=10;
+  if (frameCount%30 == 0) alien1Y+=10;
 }
 
 void updatePlayer() {
