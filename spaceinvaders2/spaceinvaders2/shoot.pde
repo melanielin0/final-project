@@ -1,25 +1,20 @@
 class shoot {
 
-  PVector bullet = new PVector();
-  
-  void setup() {
-   noStroke(); 
-  }
+  int bX, bY;
 
   void setBullet(int bX, int bY) {
-    this.bullet.x = (int) bX;
-    this.bullet.y = (int) bY;
+    this.bX = bX;
+    this.bY = bY;
   }
 
-
-  void b() {
-    while (bullet.y > 0) {
-    fill(0, 255, 0);
-    rect(bullet.x, bullet.y, 15, 40);
-    bullet.y -= 30;
-    fill(0, 0, 255);
-    rect(bullet.x, bullet.y, 15, 40);
-    }
+  void draw() {
+    noStroke();
+      fill(0, 0, 255);
+      rect(this.bX, this.bY, 15, 40);
+      if (frameCount%20 == 0) updateBullet();
   }
   
+  void updateBullet() {
+   bY -= 20;
+  }
 }

@@ -24,7 +24,7 @@ void keyPressed() {
   if (keyCode == 49) {
    shoot bullet = new shoot();
    bullet.setBullet(playerX + pw/2 - 8, playerY+height-2*ph);
-   bullet.b();
+   bullet.draw();
   }
   
 }
