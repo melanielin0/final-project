@@ -1,5 +1,3 @@
-public int bulletX, bulletY;
-
 void setup() {
  size(640, 720);
 }
