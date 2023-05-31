@@ -10,7 +10,7 @@ class shoot {
   void draw() {
     noStroke();
       fill(0, 0, 255);
-      rect(this.bX, this.bY, 15, 40);
+      rect(this.bX, this.bY, 5, 15);
       if (frameCount%20 == 0) updateBullet();
   }
   

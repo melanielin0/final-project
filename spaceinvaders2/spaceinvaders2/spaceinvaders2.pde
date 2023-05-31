@@ -1,7 +1,7 @@
 public int bulletX, bulletY;
 
 void setup() {
- size(720, 840);
+ size(640, 720);
 }
 
 void draw() {
@@ -13,14 +13,6 @@ void draw() {
 }
 
 
- //void shoot() {
- // bulletX = playerX + pw/2 - 8;
- // bulletY = playerY+height-2*ph;
- // fill (0, 0, 255);
- // rect(bulletX, bulletY, 15, 40);
-  
- //}
- 
 
   
  

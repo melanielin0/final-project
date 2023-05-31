@@ -3,7 +3,7 @@ public int pw, ph;
 
 void spawnPlayer() {
   PImage player = loadImage("player.png");
-  player.resize(0, 50);
+  player.resize(0, 25);
   image(player, playerX, height-player.height);
   pw = player.width;
   ph = player.height;
@@ -23,7 +23,7 @@ void keyPressed() {
   if (playerX < -1) playerX = 0;
   if (keyCode == 49) {
    shoot bullet = new shoot();
-   bullet.setBullet(playerX + pw/2 - 8, playerY+height-2*ph);
+   bullet.setBullet(playerX + pw/2 - 2, playerY+height-2*ph+10);
    bullet.draw();
   }
   
