@@ -1,27 +1,22 @@
 class alien {
 
   public int alien1Y;
-  
-  public alien() {
-   PImage alien1 = loadImage("alien1.png");
-   alien1.resize(0, 25);
-   for (int i = 0; i < 3; i++) {
-     for (int j = 0; j <= width/(alien1.width); j++) 
-     image(alien1, (alien1.width+33)*i, alien1Y+(alien1.height+5)*j);
-   }
-  }
+  PImage alien1;
 
-  //void spawnAlien1() {
-  //  PImage alien1 = loadImage("alien1.png");
-  //  alien1.resize(0, 25);
-  //  for (int j = 0; j < 3; j++) {
-  //    for (int i = 0; i <= width/(alien1.width); i++)
-  //      image(alien1, (alien1.width+33)*i, alien1Y+(alien1.height+5)*j);
-  //  }
-  //}
+
+  alien() {
+    alien1 = loadImage("alien1.png");
+    alien1.resize(0, 25);
+  }
+ 
+ void display() {
+   for (int i = 0; i < 3; i++) {
+      for (int j = 0; j <= width/(alien1.width); j++)
+        image(alien1, (alien1.width+33)*j, alien1Y+(alien1.height+5)*i);
+    }
+ }
 
   void updateAlien1() {
-    if (frameCount%20 == 0) alien1Y+=10;
+    if (frameCount%60 == 0) alien1Y+=10;
   }
-  
 }
