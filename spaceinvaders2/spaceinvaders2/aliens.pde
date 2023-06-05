@@ -12,7 +12,7 @@ class alien {
  void display() {
    for (int i = 0; i < 3; i++) {
       for (int j = 0; j <= width/(alien1.width); j++)
-        image(alien1, (alien1.width+33)*j, alien1Y+(alien1.height+5)*i);
+        image(alien1, (alien1.width+33)*j, alien1Y+(alien1.height+10)*i);
     }
  }
 
