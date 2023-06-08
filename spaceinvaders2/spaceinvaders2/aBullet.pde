@@ -1,7 +1,7 @@
 class aBullet extends bullet {
   
-  aBullet() {
-   super(); 
+  aBullet(int bX, int bY) {
+   super(bX, bY); 
   }
   
   void updateBullet() {

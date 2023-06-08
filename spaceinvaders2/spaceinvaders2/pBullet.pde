@@ -1,8 +1,8 @@
 class pBullet extends bullet {
   
   
-  pBullet() {
-   super(); 
+  pBullet(int bX, int bY) {
+   super(bX, bY); 
   }
   
   void updateBullet() {
