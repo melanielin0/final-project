@@ -4,26 +4,27 @@ class alien {
   public int alien1X;
   public int alienY;
   public int alienX;
-  PImage alien1;
+  public String dir;
+  PImage alien1, alien2;
 
 
-  alien(int alienX, int alien1Y) {
+  alien(int alien1X, int alien1Y, String dir) {
     alien1 = loadImage("alien1.png");
+    alien2 = loadImage("alien2.png");
     alien1.resize(0, 25);
+    alien2.resize(0, 25);
     this.alien1Y = alien1Y;
-    this.alienX = alienX;
-    
+    this.alien1X = alien1X;
+    this.dir = dir;
   }
  
- void display(int alienX, int alienY) {
-   //for (int i = 0; i < 3; i++) {
-   //   for (int j = 0; j <= width/(alien1.width); j++)
-   //     image(alien1, (alien1.width+33)*j, alien1Y+(alien1.height+10)*i);
-   // }
-   image(alien1, alienX, alienY);
+ void display(int alienY, int urgency) {
+   if (frameCount%urgency > 0 && frameCount %urgency < urgency/2) image(alien1, alien1X, alienY);
+   else image(alien2, alien1X, alienY);
  }
 
-  void updateAlien1() {
-    if (frameCount%120 == 0) alien1Y+=20;
+  void updateAlien1(int speed) {
+    if (frameCount%speed == 0 && dir.equals("right")) alien1X += 20;
+    else if (frameCount %speed == 0 && dir.equals("left")) alien1X -= 20;
   }
 }
